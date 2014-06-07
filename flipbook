@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ffmpeg -y -i $1 -r 10 -sameq tempimg/image%07d.png
+
+ruby flipbook.rb
+
+rm -f tmp/*
